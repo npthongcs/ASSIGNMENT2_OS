@@ -207,27 +207,6 @@ addr_t alloc_mem(uint32_t size, struct pcb_t * proc) {
 		v_address += PAGE_SIZE;
 	}
 
-
-	/* addr_t phys_addr;
-    addr_t vir_addr = address;
-    addr_t indexSeg = -1;
-    if (translate(vir_addr, &phys_addr, proc)){
-        addr_t phys_page = (phys_addr >> OFFSET_LEN);
-        while (phys_page != -1){
-_mem_stat[phys_page].proc = 0;
-indexSeg = get_first_lv(vir_addr);
-            for (int i = 0; i< proc->seg_table->table[indexSeg].pages->size; i++){
-                if (proc->seg_table->table[indexSeg].pages->table[i].p_index == phys_page){
-                    proc->seg_table->table[indexSeg].pages->table[i].p_index = 0;
-                    proc->seg_table->table[indexSeg].pages->table[i].v_index = 0;
-} }
-            phys_page = _mem_stat[phys_page].next;
-            vir_addr += PAGE_SIZE;
-        }
-}*/
-
-	//proc->bp = address;
-
 	pthread_mutex_unlock(&mem_lock); 
 
 	return 0;
