@@ -1,2 +1,2 @@
 # ASSIGNMENT2_OS
-Nguyen Phi Thong - HK192 - 
+Nguyen Phi Thong - HK192 - BKCSE
